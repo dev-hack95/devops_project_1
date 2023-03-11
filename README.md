@@ -2,9 +2,9 @@
 
 ```mermaid
 flowchart LR;
-    A(SOURCE) ---> B(Github);
-    B ---> C(Jenkins);
-    C ---> D(Ansible);
-    D ---> E(Docker);
-    D ---> F(Kubernetes);
+    A(SOURCE) --commit-> B(Github);
+    B --Webhook--> C(Jenkins-server);
+    C ---> D(Ansible-Server);
+    D ---> E(Docker Hub);
+    D ---> F(Kubernetes Cluster);
 ```

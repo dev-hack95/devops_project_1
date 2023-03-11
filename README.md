@@ -1,7 +1,7 @@
 # Devops_project_1
 
 ```mermaid
-FLOWCHART LR;
+flowchart LR;
     A(SOURCE) -----> B(Github);
     B -----> C(Jenkins);
     C -----> D(Ansible);

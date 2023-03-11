@@ -5,6 +5,6 @@ flowchart LR;
     A(SOURCE) -----> B(Github);
     B -----> C(Jenkins);
     C -----> D(Ansible);
-    D -----> E(Docker);
-    D -----> F(Kubernetes);
+    D -------> E(Docker);
+    D ---> F(Kubernetes);
 ```

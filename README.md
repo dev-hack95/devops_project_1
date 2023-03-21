@@ -32,4 +32,4 @@ flowchart LR;
   3. Docker
   4. Kubernetes(Minikube)
   5. aws
-  6. Github Webhooks
+  6. Github(Webhooks)

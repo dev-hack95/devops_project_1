@@ -34,5 +34,15 @@ pipeline {
                 }
             }
         }
+
+        stage("Docker image tagging") {
+            stage {
+                sshagent(['ansible_server']) {
+                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@ip cd /home/ubuntu'
+                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@ip docker image tag $JOB_NAME:$BUILD_ID devhack95/$JOB_NAME:$BUILD_ID'
+                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@ip docker image tag $JOB_NAME:$BUILD_ID devhack95/$JOB_NAME:latest'
+                }
+            }
+        }
     }
 }

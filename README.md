@@ -26,3 +26,9 @@ flowchart LR;
     D ---> E(Docker Hub);
     D ---> F(Kubernetes Cluster);
 ```
+## Tech Stack
+  1. Jenkins
+  2. Ansible
+  3. Docker
+  4. Kubernetes(Minikube)
+  5. aws

@@ -21,7 +21,7 @@ pipeline {
             steps {
                 sshagent(['ansible_server']) {
                     sh 'ssh -o StrictHostKeyChecking=no ubuntu@100.25.45.86 cd /home/ubuntu/'
-                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@100.25.45.86 sudo docker image build ./Dockefile . -t $JOB_NAME:$BUILD_ID'
+                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@100.25.45.86 sudo docker build -f ./Dockefile . -t $JOB_NAME:$BUILD_ID'
                 }
             }
         }
@@ -30,7 +30,7 @@ pipeline {
             steps {
                 sshagent(['ansible_server']) {
                     sh 'ssh -o StrictHostKeyChecking=no ubuntu@100.25.45.86 cd /home/ubuntu/'
-                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@100.25.43.86 sudo docker image list'
+                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@100.25.43.86 sudo docker image ls'
                 }
             }
         }
